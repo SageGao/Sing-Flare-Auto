@@ -1,10 +1,7 @@
 #!/bin/sh
 
-# 替换配置文件中的 UUID
-sed -i "s/PASTE_YOUR_UUID_HERE/$UUID/g" config.json
-
 # 后台运行 sing-box
 sing-box run -c config.json &
 
 # 运行 Cloudflare Tunnel
-cloudflared tunnel --no-autoupdate run --token $ARGO_TOKEN
+cloudflared tunnel --no-autoupdate run --token eyJhIjoiMjhmOThjNjkxN2M1ZTVjMzZjMDY5YTg3MzdmYzYyMmYiLCJ0IjoiYThhNzk1MTctNGI3NS00MzgxLWE2YzUtZTAyMWZiOWUwMjk2IiwicyI6Ik5qUXdPVE5rWTJNdFpXSXlZeTAwTnpNMkxXRXhOV1F0TnpjNU9URTVZMk14WVRrMSJ9
