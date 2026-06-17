@@ -9,7 +9,7 @@ on:
 env:
   REGISTRY: ghcr.io
   # github.repository 会自动获取你的仓库名，即 zzzhhh1/Sing-Flare-Auto
-  IMAGE_NAME: Monroe
+  IMAGE_NAME: ${{ github.repository }}
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
